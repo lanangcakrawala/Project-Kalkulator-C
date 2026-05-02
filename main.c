@@ -1,16 +1,21 @@
 #include <stdio.h>
 
+// --- FUNGSI Ivan & Wibi ---
 float add(float a, float b) { return a + b; }
 float sub(float a, float b) { return a - b; }
-float mul(float a, float b) { return a * b; }
 float div(float a, float b) { return a / b; }
+
+// --- FUNGSI CAKRA (PERKALIAN) ---
+float mul(float a, float b) { 
+    return a * b; 
+}
 
 int main() {
     int op;
     float x, y;
 
-    printf("Simple Calculator\n");
-    printf("1. Add\n2. Sub\n3. Mul\n4. Div\n");
+    printf("=== KALKULATOR KELOMPOK ===\n");
+    printf("1. Add (Tambah)\n2. Sub (Kurang)\n3. Mul (Kali)\n4. Div (Bagi)\n");
 
     do {
         printf("Select Menu (1-4): ");
@@ -31,7 +36,7 @@ int main() {
     printf("Result: ");
     if (op == 1) printf("%.2f", add(x, y));
     else if (op == 2) printf("%.2f", sub(x, y));
-    else if (op == 3) printf("%.2f", mul(x, y));
+    else if (op == 3) printf("%.2f", mul(x, y)); // Memanggil fungsi buatan Cakra
     else if (op == 4) {
         if (y != 0) printf("%.2f", div(x, y));
         else printf("Error: Division by zero");
